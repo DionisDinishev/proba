@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+
+    </div>
+    <div class="col-sm-4">
+      <h2>Students</h2>
+      <ul style="list-style: none">
+        <li *ngFor="let student of students" (click)="onSelect(student)">
+          <span>{{student.firstName}}</span>{{student.lastName}}
+        </li>
+      </ul>
+      <app-student-details [student]="selectedStudent"></app-student-details>
+    </div>
+  </div>
+</div>
+
